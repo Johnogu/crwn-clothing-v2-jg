@@ -1,2 +1,0 @@
-# crwn-clothing
-Clothing webshop
