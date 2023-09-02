@@ -10,7 +10,14 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 
-import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  setDoc,
+  collection,
+  writeBatch,
+} from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -39,6 +46,11 @@ export const signInWithGoogleRedirect = () => {
 };
 
 export const db = getFirestore();
+
+export const addCollectionsAndDocuments = async (collectionKey, objectsYoAdd) => {
+ const collectionRef = collection(db, collectionKey);
+ 
+}
 
 export const createUserDocumentFromAuth = async (
   userAuth,
