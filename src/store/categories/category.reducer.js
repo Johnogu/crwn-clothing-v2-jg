@@ -5,10 +5,11 @@ export const CATEGORIES_INITIAL_STATE = {
 };
 
 export const categoriesReducer = (
-  state = CATEGORIES_INITIAL_STATE,
+    state = CATEGORIES_INITIAL_STATE,
   action = {}
 ) => {
-  const { type, payload } = action;
+    //console.log("selector 4 fired");
+    const { type, payload } = action;
 
   switch (type) {
     case CATEGORIES_ACTION_TYPES.SET_CATEGORIES:
