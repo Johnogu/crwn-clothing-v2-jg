@@ -10,14 +10,14 @@ import "./category.styles.scss";
 
 const Category = () => {
   const { category } = useParams();
-  console.log("render/re-rendering catefory component");
+  //console.log("render/re-rendering catefory component");
   const categoriesMap = useSelector(selectCategoriesMap);
   //const { categoriesMap } = useContext(CategoriesContext);
   //const products = categoriesMap[category] - works but will rerender often
   const [products, setProducts] = useState(categoriesMap[category]);
 
   useEffect(() => {
-    console.log("effect fired calling setProducts");
+    //console.log("effect fired calling setProducts");
     setProducts(categoriesMap[category]);
   }, [category, categoriesMap]);
 
